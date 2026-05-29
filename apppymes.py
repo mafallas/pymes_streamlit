@@ -21,8 +21,8 @@ st.markdown("Visualización de resultados desde tabla consolidada")
 def get_data():
     conn = pyodbc.connect(
         "DRIVER={ODBC Driver 17 for SQL Server};"
-        "SERVER=CRIVBCOCREBD.cri.CORP.REDBAC.com,3025;"
-        "DATABASE=MiBase;"
+        "SERVER=CRICPPVBCOCREBD.cri.CORP.REDBAC.com,3025;"
+        "DATABASE=JOB_PYMES;"
         "Trusted_Connection=yes;"
     )
 
@@ -31,7 +31,7 @@ def get_data():
             TipoBase,
             Cantidad,
             Ofrecimiento
-        FROM MiBase.dbo.ResultadoFinal
+        FROM JOB_PYMES.dbo.ResumenMesActual
         ORDER BY TipoBase
     """
 
